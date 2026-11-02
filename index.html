@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111018">
+  <title>RAM-MD | WhatsApp Pairing</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="panel">
+    <div class="logo" aria-hidden="true">🤖</div>
+    <h1>RAM-MD</h1>
+    <p class="subtitle">Connect your WhatsApp account</p>
+
+    <div class="tabs">
+      <button class="tab active" data-slot="1">🔑 PAIR 1</button>
+      <button class="tab" data-slot="2">🔗 PAIR 2</button>
+    </div>
+
+    <section class="notice">
+      <p><b>ⓘ</b> Select a pair endpoint, enter your WhatsApp number with country code, then generate your 8-digit pairing code.</p>
+      <details>
+        <summary>Show Instructions</summary>
+        <ol>
+          <li>Open WhatsApp on your phone.</li>
+          <li>Go to Settings → Linked devices.</li>
+          <li>Tap Link a device → Link with phone number instead.</li>
+          <li>Enter the code shown here.</li>
+        </ol>
+      </details>
+    </section>
+
+    <label for="phone">Enter your WhatsApp number with country code</label>
+    <input id="phone" type="tel" inputmode="numeric" autocomplete="tel"
+      placeholder="919876543210" maxlength="15">
+    <p class="hint">Example: 919876543210 (91 for India). Digits only, no + or spaces.</p>
+
+    <button id="generate" class="generate">🔑 Generate Pair Code</button>
+
+    <section class="result" aria-live="polite">
+      <p id="resultText">Your pair code will appear here</p>
+      <button id="copy" class="copy" hidden>Copy Code</button>
+    </section>
+    <p id="status" class="status" role="status"></p>
+    <footer>RAM-MD • Use only with your own WhatsApp account</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
